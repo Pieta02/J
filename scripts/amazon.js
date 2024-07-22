@@ -1,4 +1,4 @@
-
+import {cart} from '../data/cart.js'; //    ../  <-- getting out of folder
 
 let productsHtml = '';
 
