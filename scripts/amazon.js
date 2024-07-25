@@ -1,4 +1,4 @@
-import {cart, addToCart} from '../data/cart.js'; //    ../  <-- getting out of folder
+import {cart, addToCart, calculateCartQuantity} from '../data/cart.js'; //    ../  <-- getting out of folder
 
 import { products } from '../data/products.js';
 
@@ -57,18 +57,15 @@ products.forEach((product) => {
           </button>
         </div>
       `;
-
 });
 
+updateCartQuantity();
 
 
 document.querySelector('.js-products-grid').innerHTML = productsHtml;
 
 function updateCartQuantity() {
-  let cartQuntity = 0;
-  cart.forEach((cartItem) => {
-    cartQuntity += cartItem.quantity;
-  })
+  const cartQuntity = calculateCartQuantity()
 
   document.querySelector('.js-cart-quantity').innerHTML = cartQuntity;
 }
