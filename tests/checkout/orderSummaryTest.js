@@ -85,6 +85,6 @@ describe('test suite: renderOrdedSummary', () => {
     ).toEqual('$20.95');
     expect(cart.length).toEqual(1);
     expect(cart[0].productId).toEqual(productId2)
-
   });
+
 });
